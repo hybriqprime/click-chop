@@ -17,6 +17,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Health check route
+app.use('/api/auth', require('./src/routes/authRoutes'));
+
 app.get('/', (req, res) => {
   res.json({ success: true, message: 'Click-Chop API is running' });
 });
