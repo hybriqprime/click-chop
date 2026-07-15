@@ -2,7 +2,7 @@ const Order = require('../models/Order');
 const Menu = require('../models/Menu');
 
 // POST /api/orders - private (any logged-in user)
-const createOrder = async (req, res) => {
+const createOrder = async (req, res, next) => {
   try {
     const { items, deliveryAddress } = req.body;
 
@@ -44,12 +44,12 @@ const createOrder = async (req, res) => {
 
     res.status(201).json({ success: true, order });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // GET /api/orders/my-orders - private
-const getMyOrders = async (req, res) => {
+const getMyOrders = async (req, res, next) => {
   try {
     const orders = await Order.find({ user: req.user._id })
       .populate('items.menuItem', 'name price imageUrl')
@@ -57,12 +57,12 @@ const getMyOrders = async (req, res) => {
 
     res.status(200).json({ success: true, count: orders.length, orders });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // GET /api/orders - admin only
-const getAllOrders = async (req, res) => {
+const getAllOrders = async (req, res, next) => {
   try {
     const orders = await Order.find()
       .populate('user', 'name email')
@@ -71,12 +71,12 @@ const getAllOrders = async (req, res) => {
 
     res.status(200).json({ success: true, count: orders.length, orders });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // GET /api/orders/:id - private/admin
-const getOrderById = async (req, res) => {
+const getOrderById = async (req, res, next) => {
   try {
     const order = await Order.findById(req.params.id)
       .populate('user', 'name email')
@@ -93,12 +93,12 @@ const getOrderById = async (req, res) => {
 
     res.status(200).json({ success: true, order });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // PATCH /api/orders/:id/status - admin only
-const updateOrderStatus = async (req, res) => {
+const updateOrderStatus = async (req, res, next) => {
   try {
     const { status } = req.body;
 
@@ -114,7 +114,7 @@ const updateOrderStatus = async (req, res) => {
 
     res.status(200).json({ success: true, order });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 

@@ -1,7 +1,7 @@
 const User = require('../models/User');
 
 // GET /api/users/profile
-const getProfile = async (req, res) => {
+const getProfile = async (req, res, next) => {
   try {
     res.status(200).json({
       success: true,
@@ -14,12 +14,12 @@ const getProfile = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // PUT /api/users/profile
-const updateProfile = async (req, res) => {
+const updateProfile = async (req, res, next) => {
   try {
     const { name, phone } = req.body;
 
@@ -44,7 +44,7 @@ const updateProfile = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 

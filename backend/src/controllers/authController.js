@@ -2,7 +2,7 @@ const User = require('../models/User');
 const generateToken = require('../utils/generateToken');
 
 // POST /api/auth/signup
-const signup = async (req, res) => {
+const signup = async (req, res, next) => {
   try {
     const { name, email, password, phone } = req.body;
 
@@ -26,12 +26,12 @@ const signup = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // POST /api/auth/login
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
@@ -58,7 +58,7 @@ const login = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 

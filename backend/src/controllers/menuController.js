@@ -1,7 +1,7 @@
 const Menu = require('../models/Menu');
 
 // GET /api/menu - public, supports search & filter
-const getAllMenuItems = async (req, res) => {
+const getAllMenuItems = async (req, res, next) => {
   try {
     const { search, category, minPrice, maxPrice } = req.query;
     const filter = {};
@@ -22,12 +22,12 @@ const getAllMenuItems = async (req, res) => {
 
     res.status(200).json({ success: true, count: menuItems.length, menuItems });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // GET /api/menu/:id - public
-const getMenuItemById = async (req, res) => {
+const getMenuItemById = async (req, res, next) => {
   try {
     const menuItem = await Menu.findById(req.params.id);
     if (!menuItem) {
@@ -35,22 +35,22 @@ const getMenuItemById = async (req, res) => {
     }
     res.status(200).json({ success: true, menuItem });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // POST /api/menu - admin only
-const createMenuItem = async (req, res) => {
+const createMenuItem = async (req, res, next) => {
   try {
     const menuItem = await Menu.create(req.body);
     res.status(201).json({ success: true, menuItem });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // PUT /api/menu/:id - admin only
-const updateMenuItem = async (req, res) => {
+const updateMenuItem = async (req, res, next) => {
   try {
     const menuItem = await Menu.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -61,12 +61,12 @@ const updateMenuItem = async (req, res) => {
     }
     res.status(200).json({ success: true, menuItem });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
 // DELETE /api/menu/:id - admin only
-const deleteMenuItem = async (req, res) => {
+const deleteMenuItem = async (req, res, next) => {
   try {
     const menuItem = await Menu.findByIdAndDelete(req.params.id);
     if (!menuItem) {
@@ -74,7 +74,7 @@ const deleteMenuItem = async (req, res) => {
     }
     res.status(200).json({ success: true, message: 'Menu item deleted' });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    next(error);
   }
 };
 
