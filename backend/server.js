@@ -20,6 +20,7 @@ app.use(express.json());
 app.use('/api/auth', require('./src/routes/authRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
 app.use('/api/menu', require('./src/routes/menuRoutes'));
+app.use('/api/orders', require('./src/routes/orderRoutes'));
 
 app.get('/', (req, res) => {
   res.json({ success: true, message: 'Click-Chop API is running' });
