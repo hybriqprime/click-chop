@@ -4,6 +4,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const connectDB = require('./src/config/db');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./src/config/swagger');
 
 const app = express();
 
@@ -16,16 +18,19 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-// Health check route
+// Routes
 app.use('/api/auth', require('./src/routes/authRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
 app.use('/api/menu', require('./src/routes/menuRoutes'));
 app.use('/api/orders', require('./src/routes/orderRoutes'));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// Health check route
 app.get('/', (req, res) => {
   res.json({ success: true, message: 'Click-Chop API is running' });
 });
 
+// Centralized error handler - must be last
 app.use(require('./src/middleware/errorHandler'));
 
 const PORT = process.env.PORT || 5000;
