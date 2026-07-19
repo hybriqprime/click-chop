@@ -1,10 +1,31 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import MainLayout from './layouts/MainLayout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Menu from './pages/Menu';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Cart from './pages/Cart';
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-orange-600">
-        Click-Chop is set up 🍽️
-      </h1>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </MainLayout>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
