@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../services/api';
 
 const Menu = () => {
@@ -71,7 +72,11 @@ const Menu = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {menuItems.map((item) => (
-          <div key={item._id} className="border border-gray-200 rounded-xl p-4 hover:shadow-md transition">
+          <Link
+            to={`/menu/${item._id}`}
+            key={item._id}
+            className="border border-gray-200 rounded-xl p-4 hover:shadow-md transition block"
+          >
             {item.imageUrl && (
               <img
                 src={item.imageUrl}
@@ -85,7 +90,7 @@ const Menu = () => {
               <span className="text-orange-600 font-bold">₦{item.price.toLocaleString()}</span>
               <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">{item.category}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
