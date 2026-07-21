@@ -66,7 +66,7 @@ const Profile = () => {
           <input
             type="text"
             {...register('name', { required: 'Name is required' })}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
           />
           {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name.message}</p>}
         </div>
@@ -76,14 +76,14 @@ const Profile = () => {
           <input
             type="text"
             {...register('phone')}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 disabled:opacity-50"
+          className="w-full bg-terracotta-600 text-white py-2 rounded-lg hover:bg-terracotta-700 disabled:opacity-50"
         >
           {loading ? 'Saving...' : 'Save Changes'}
         </button>

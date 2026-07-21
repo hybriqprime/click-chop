@@ -34,7 +34,7 @@ const Cart = () => {
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
         <h1 className="text-3xl font-bold mb-4">Your Cart</h1>
         <p className="text-gray-500 mb-6">Your cart is empty.</p>
-        <Link to="/menu" className="text-orange-600 hover:underline">
+        <Link to="/menu" className="text-terracotta-600 hover:underline">
           Browse the menu &rarr;
         </Link>
       </div>
@@ -53,7 +53,7 @@ const Cart = () => {
           >
             <div>
               <h2 className="font-semibold">{item.name}</h2>
-              <p className="text-orange-600 font-bold">₦{item.price.toLocaleString()}</p>
+              <p className="text-terracotta-600 font-bold">₦{item.price.toLocaleString()}</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -79,7 +79,7 @@ const Cart = () => {
         <span className="text-xl font-bold">Total: ₦{total.toLocaleString()}</span>
         <button
           onClick={() => navigate('/checkout')}
-          className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700"
+          className="bg-terracotta-600 text-white px-8 py-3 rounded-lg hover:bg-terracotta-700"
         >
           Proceed to Checkout
         </button>

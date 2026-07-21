@@ -61,18 +61,18 @@ const Menu = () => {
           placeholder="Search meals..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="flex-1 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
         />
         <input
           type="text"
           placeholder="Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="w-40 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="w-40 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
         />
         <button
           type="submit"
-          className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700"
+          className="bg-terracotta-600 text-white px-6 py-2 rounded-lg hover:bg-terracotta-700"
         >
           Search
         </button>
@@ -107,7 +107,7 @@ const Menu = () => {
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-gray-500 text-sm mb-2">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-orange-600 font-bold">₦{item.price.toLocaleString()}</span>
+                  <span className="text-terracotta-600 font-bold">₦{item.price.toLocaleString()}</span>
                   <span className="text-xs bg-gray-100 px-2 py-1 rounded-full">{item.category}</span>
                 </div>
               </Link>

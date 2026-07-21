@@ -79,7 +79,7 @@ const ManageMenu = () => {
         <h2 className="text-xl font-semibold">Manage Menu</h2>
         <button
           onClick={() => (showForm ? resetForm() : setShowForm(true))}
-          className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700"
+          className="bg-terracotta-600 text-white px-4 py-2 rounded-lg hover:bg-terracotta-700"
         >
           {showForm ? 'Cancel' : '+ Add Menu Item'}
         </button>
@@ -129,7 +129,7 @@ const ManageMenu = () => {
             />
             Available
           </label>
-          <button type="submit" className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700">
+          <button type="submit" className="bg-terracotta-600 text-white px-6 py-2 rounded-lg hover:bg-terracotta-700">
             {editingId ? 'Update Item' : 'Create Item'}
           </button>
         </form>
@@ -146,7 +146,7 @@ const ManageMenu = () => {
                 <p className="text-sm text-gray-500">{item.category} · ₦{item.price.toLocaleString()}</p>
               </div>
               <div className="flex gap-3">
-                <button onClick={() => handleEdit(item)} className="text-orange-600 hover:underline text-sm">Edit</button>
+                <button onClick={() => handleEdit(item)} className="text-terracotta-600 hover:underline text-sm">Edit</button>
                 <button onClick={() => handleDelete(item._id)} className="text-red-600 hover:underline text-sm">Delete</button>
               </div>
             </div>

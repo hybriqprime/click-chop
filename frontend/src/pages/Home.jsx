@@ -23,18 +23,18 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-600 to-orange-500 text-white">
+      <section className="bg-gradient-to-br from-terracotta-600 to-terracotta-500 text-white">
         <div className="max-w-6xl mx-auto px-4 py-24 text-center">
           <h1 className="text-5xl sm:text-6xl font-bold mb-4">
             Great Food, Delivered Fast
           </h1>
-          <p className="text-lg sm:text-xl text-orange-50 mb-8 max-w-2xl mx-auto">
-            From smoky jollof rice to rich soups and cold drinks — order your favorites
+          <p className="text-lg sm:text-xl text-terracotta-50 mb-8 max-w-2xl mx-auto">
+            From smoky jollof rice to rich soups and cold drinks - order your favorites
             and track every step, right to your door.
           </p>
           <Link
             to="/menu"
-            className="inline-block bg-white text-orange-600 font-bold px-8 py-3 rounded-lg hover:bg-orange-50 transition"
+            className="inline-block bg-white text-terracotta-600 font-bold px-8 py-3 rounded-lg hover:bg-terracotta-50 transition"
           >
             Browse the Menu
           </Link>
@@ -64,14 +64,14 @@ const Home = () => {
                 )}
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-gray-500 text-sm mb-2">{item.description}</p>
-                <span className="text-orange-600 font-bold">₦{item.price.toLocaleString()}</span>
+                <span className="text-terracotta-600 font-bold">₦{item.price.toLocaleString()}</span>
               </Link>
             ))}
           </div>
         )}
 
         <div className="text-center mt-10">
-          <Link to="/menu" className="text-orange-600 font-medium hover:underline">
+          <Link to="/menu" className="text-terracotta-600 font-medium hover:underline">
             See the Full Menu &rarr;
           </Link>
         </div>
@@ -84,7 +84,7 @@ const Home = () => {
           <p className="text-gray-300 mb-8">Create an account and place your first order in minutes.</p>
           <Link
             to="/register"
-            className="inline-block bg-orange-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-orange-700 transition"
+            className="inline-block bg-terracotta-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-terracotta-700 transition"
           >
             Get Started
           </Link>

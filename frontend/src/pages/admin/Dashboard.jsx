@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
         <div className="border border-gray-200 rounded-xl p-6">
           <p className="text-sm text-gray-500 mb-1">Total Revenue</p>
-          <p className="text-3xl font-bold text-orange-600">
+          <p className="text-3xl font-bold text-terracotta-600">
             ₦{stats.totalRevenue.toLocaleString()}
           </p>
         </div>

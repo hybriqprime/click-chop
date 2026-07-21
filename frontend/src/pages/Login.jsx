@@ -39,7 +39,7 @@ const Login = () => {
           <input
             type="email"
             {...register('email', { required: 'Email is required' })}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
           />
           {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>}
         </div>
@@ -49,7 +49,7 @@ const Login = () => {
           <input
             type="password"
             {...register('password', { required: 'Password is required' })}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500"
           />
           {errors.password && <p className="text-red-600 text-sm mt-1">{errors.password.message}</p>}
         </div>
@@ -57,7 +57,7 @@ const Login = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 disabled:opacity-50"
+          className="w-full bg-terracotta-600 text-white py-2 rounded-lg hover:bg-terracotta-700 disabled:opacity-50"
         >
           {loading ? 'Logging in...' : 'Login'}
         </button>
@@ -65,7 +65,7 @@ const Login = () => {
 
       <p className="text-sm text-gray-600 mt-4 text-center">
         Don't have an account?{' '}
-        <Link to="/register" className="text-orange-600 hover:underline">Register</Link>
+        <Link to="/register" className="text-terracotta-600 hover:underline">Register</Link>
       </p>
     </div>
   );

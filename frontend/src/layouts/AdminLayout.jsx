@@ -6,13 +6,13 @@ const AdminLayout = () => {
       <h1 className="text-2xl font-bold mb-6">Admin Panel</h1>
 
       <div className="flex gap-4 mb-8 border-b border-gray-200 pb-4">
-        <Link to="/admin" className="text-orange-600 hover:underline font-medium">
+        <Link to="/admin" className="text-terracotta-600 hover:underline font-medium">
           Dashboard
         </Link>
-        <Link to="/admin/menu" className="text-orange-600 hover:underline font-medium">
+        <Link to="/admin/menu" className="text-terracotta-600 hover:underline font-medium">
           Manage Menu
         </Link>
-        <Link to="/admin/orders" className="text-orange-600 hover:underline font-medium">
+        <Link to="/admin/orders" className="text-terracotta-600 hover:underline font-medium">
           Manage Orders
         </Link>
       </div>

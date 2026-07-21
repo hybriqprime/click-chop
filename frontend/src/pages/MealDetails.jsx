@@ -52,7 +52,7 @@ const MealDetails = () => {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <button
         onClick={() => navigate('/menu')}
-        className="text-orange-600 mb-6 hover:underline"
+        className="text-terracotta-600 mb-6 hover:underline"
       >
         &larr; Back to Menu
       </button>
@@ -70,7 +70,7 @@ const MealDetails = () => {
         {meal.category}
       </span>
       <p className="text-gray-600 mb-4">{meal.description}</p>
-      <p className="text-2xl font-bold text-orange-600 mb-6">
+      <p className="text-2xl font-bold text-terracotta-600 mb-6">
         ₦{meal.price.toLocaleString()}
       </p>
 
@@ -88,7 +88,7 @@ const MealDetails = () => {
       <button
         onClick={handleAddToCart}
         disabled={!meal.isAvailable}
-        className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 disabled:opacity-50"
+        className="bg-terracotta-600 text-white px-8 py-3 rounded-lg hover:bg-terracotta-700 disabled:opacity-50"
       >
         {meal.isAvailable ? (added ? 'Added to Cart ✓' : 'Add to Cart') : 'Currently Unavailable'}
       </button>

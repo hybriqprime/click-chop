@@ -86,13 +86,13 @@ const Checkout = () => {
           onChange={(e) => setDeliveryAddress(e.target.value)}
           rows={3}
           placeholder="e.g. 12 Admiralty Way, Lekki, Lagos"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terracotta-500 mb-4"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700 disabled:opacity-50"
+          className="w-full bg-terracotta-600 text-white py-3 rounded-lg hover:bg-terracotta-700 disabled:opacity-50"
         >
           {loading ? 'Placing Order...' : 'Place Order'}
         </button>
