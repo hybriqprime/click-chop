@@ -11,6 +11,7 @@ import Register from './pages/Register';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import MyOrders from './pages/MyOrders';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orders" element={<MyOrders />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </MainLayout>
       </AuthProvider>
