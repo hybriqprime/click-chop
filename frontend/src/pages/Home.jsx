@@ -23,23 +23,32 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-terracotta-600 to-terracotta-500 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-24 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-4">
-            Great Food, Delivered Fast
-          </h1>
-          <p className="text-lg sm:text-xl text-terracotta-50 mb-8 max-w-2xl mx-auto">
-            From smoky jollof rice to rich soups and cold drinks - order your favorites
-            and track every step, right to your door.
-          </p>
-          <Link
-            to="/menu"
-            className="inline-block bg-white text-terracotta-600 font-bold px-8 py-3 rounded-lg hover:bg-terracotta-50 transition"
-          >
-            Browse the Menu
-          </Link>
-        </div>
-      </section>
+      <section className="bg-terracotta-700 text-white overflow-hidden">
+  <div className="max-w-6xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div className="text-center md:text-left">
+      <h1 className="text-5xl sm:text-6xl font-bold mb-4">
+        Great Food, Delivered Fast
+      </h1>
+      <p className="text-lg sm:text-xl text-terracotta-50 mb-8 max-w-xl mx-auto md:mx-0">
+        From smoky jollof rice to rich soups and cold drinks - order your favorites
+        and track every step, right to your door.
+      </p>
+      <Link
+        to="/menu"
+        className="inline-block bg-white text-terracotta-700 font-bold px-8 py-3 rounded-lg hover:bg-terracotta-50 transition"
+      >
+        Browse the Menu
+      </Link>
+    </div>
+    <div className="flex justify-center">
+      <img
+        src="https://images.unsplash.com/photo-1651440204296-a79fa9988007?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg4fHxyZXN0YXVyYW50fGVufDB8fDB8fHww"
+        alt="Bowl of jollof rice"
+        className="hero-float w-full max-w-sm rounded-2xl shadow-xl object-cover"
+      />
+    </div>
+  </div>
+</section>
 
       {/* Featured Meals */}
       <section className="max-w-6xl mx-auto px-4 py-16">

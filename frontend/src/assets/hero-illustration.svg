@@ -1,0 +1,40 @@
+<svg viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="plateShade" cx="50%" cy="40%" r="60%">
+<stop offset="0%" stop-color="#FFFFFF"/>
+<stop offset="100%" stop-color="#F0E4D8"/>
+</radialGradient>
+</defs>
+<circle cx="340" cy="290" r="190" fill="#FDF8F3"/>
+<ellipse cx="340" cy="300" rx="200" ry="70" fill="#7A3A1A" opacity="0.08"/>
+<ellipse cx="340" cy="300" rx="175" ry="175" fill="url(#plateShade)" stroke="#E8CFB8" stroke-width="2"/>
+<ellipse cx="340" cy="300" rx="140" ry="140" fill="#F5EAE0"/>
+<ellipse cx="340" cy="290" rx="120" ry="105" fill="#C1652F"/>
+<ellipse cx="300" cy="255" rx="10" ry="7" fill="#9A4A24"/>
+<ellipse cx="360" cy="270" rx="9" ry="6" fill="#9A4A24"/>
+<ellipse cx="330" cy="310" rx="11" ry="7" fill="#9A4A24"/>
+<ellipse cx="390" cy="300" rx="8" ry="6" fill="#9A4A24"/>
+<ellipse cx="280" cy="300" rx="9" ry="6" fill="#9A4A24"/>
+<circle cx="310" cy="270" r="12" fill="#E23B2E"/>
+<circle cx="370" cy="310" r="11" fill="#E23B2E"/>
+<path d="M320 230 Q340 190 360 230" stroke="#3F4B3B" stroke-width="8" stroke-linecap="round" fill="none"/>
+<path d="M300 235 Q315 205 330 235" stroke="#3F4B3B" stroke-width="7" stroke-linecap="round" fill="none"/>
+<g stroke="#DBB58F" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9">
+<path d="M255 190 C245 165 265 150 255 125"/>
+<path d="M300 175 C290 150 310 135 300 110"/>
+<path d="M345 170 C335 145 355 130 345 105"/>
+<path d="M390 180 C380 155 400 140 390 115"/>
+</g>
+<g fill="#C1652F">
+<circle cx="120" cy="120" r="26"/>
+<circle cx="580" cy="140" r="18"/>
+<circle cx="600" cy="380" r="22"/>
+<circle cx="90" cy="380" r="16"/>
+</g>
+<g fill="#3F4B3B" opacity="0.85">
+<circle cx="120" cy="120" r="7"/>
+<circle cx="580" cy="140" r="5"/>
+<circle cx="600" cy="380" r="6"/>
+<circle cx="90" cy="380" r="4.5"/>
+</g>
+</svg>
