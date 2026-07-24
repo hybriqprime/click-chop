@@ -1,3 +1,4 @@
+import logo from '../assets/logo.svg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -12,7 +13,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center" onClick={closeMenu}>
-          <img src="/src/assets/logo.svg" alt="Click-Chop" className="h-10" />
+         <img src={logo} alt="Click-Chop" className="h-10" />
         </Link>
 
         <button
