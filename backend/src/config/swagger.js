@@ -9,12 +9,16 @@ const options = {
       description:
         'Full-stack food ordering & management system API — PORA Tech Academy Capstone, Cohort 7',
     },
-    servers: [
-      {
-        url: 'http://localhost:5000',
-        description: 'Local development server',
-      },
-    ],
+   servers: [
+  {
+    url: 'https://click-chop-backend.onrender.com',
+    description: 'Production server (Render)',
+  },
+  {
+    url: 'http://localhost:5000',
+    description: 'Local development server',
+  },
+],
     components: {
       securitySchemes: {
         bearerAuth: {
